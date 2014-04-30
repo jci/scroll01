@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<meta title="Scrolling1" package="scroll" version="1.0.0" company="" />
+
+ 	<app file="Main" main="Main" path="bin" />
+
+	<window width="600" height="300" orientation="landscape" fps="30" background="0x000000" />
+
+	<source path="source" />
+
+	<haxelib name="openfl" />
+	<haxelib name="HaxePunk" />
+
+	<assets path="assets/graphics" rename="graphics" include="*.png|*.jpg" />
+
+	<icon path="assets/HaxePunk.svg" />
+</project>
