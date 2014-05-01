@@ -2,9 +2,9 @@ package entities ;
 
 import flash.geom.Point;
 import com.haxepunk.HXP;
+import com.haxepunk.Entity;
 
-
-class Character extends Physics
+class Character extends Entity
 {
 	public var attack:Int;
 	public var defense:Int;
@@ -71,8 +71,6 @@ class Character extends Physics
 		x = _spawnPoint.x;
 		y = _spawnPoint.y;
 		health = maxHealth;
-		acceleration.x = 0;
-		velocity.y = velocity.x = 0;
 	}
 
 	public function kill()

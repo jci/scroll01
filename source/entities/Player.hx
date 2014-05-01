@@ -18,26 +18,28 @@ class Player extends Character
 	public var crouching:Bool;
 	public var onLadder:Bool;
 	public var disableControls:Bool;
-
 	public var maxJumps:Int;
-
 	private static inline var kJumpForce:Float = 110;
-	
 	public var facingLeft : Bool;
+	public var _height : Int;
+	public var _width : Int;
 	
 	public function new (x:Float, y:Float)
 	{
 		super(x,y);
 
-		sprite = new Spritemap("graphics/firefox.png",56,80);
+		_height = 80;
+		_width = 56;
 
-		sprite.add("Walk",[3,4,5,6,7,8,9,10],12);
+		sprite = new Spritemap("graphics/firefox.png",_width,_height);
+
+		sprite.add("Walk",[3,4,5],12);
 		sprite.add("Idle",[0,1,2],12);
 		sprite.add("Jump",[3,4,5],6);
 		graphic = sprite;
 		type = "player";
 
-		setHitbox(15,34,-2,-1);
+		setHitbox(_width-8,_height-10,-8,-10);
 
 		flags = new Array<String>();
 
